@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <title>Google</title>
+    <style type="text/css">
+        body, ul, li, p, #reset {
+            margin: 0;
+            padding: 0;
+            list-style: none;}
+
+        body {background-color: rgba(32,33,36,1);}
+
+        /*Imagem - Div*/
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        div #google {margin-top: 12rem}
+
+        /*Menu Superior*/
+        a {
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .menu {
+            display: flex; 
+            justify-content: flex-end;
+        }
+
+        .menu li {
+            padding: 20px 20px 0px 0px; /*top, right, bottom, left*/
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+        }
+
+        .menu li a:hover {text-decoration: underline;}
+
+        /*PARTE DA GAVETA DE APPS - 3° ITEM DO HEADER*/
+        header img {
+            width: 20px;
+            height: 20px;
+            filter: invert(100%);
+        }
+
+        header #app {
+            padding: 8px;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            margin: 10px 10px 10px 0px; /*top, right, bottom, left*/       
+        }
+
+        header div:hover {
+            background:#303134;
+        }
+
+        header #perfil {
+            margin: 10px 10px 10px 0px; /*top, right, bottom, left*/       
+            border-radius: 50%;
+            background: black;
+            padding: 8px 8px 8px 8px;
+            width: 15px;
+            height: 15px;
+            border: 5px solid rgba(32,33,36,1);
+        }
+
+        header #perfil:hover {
+            border: 5px solid #303134;
+        }
+
+        /*Formulário*/
+        #barra-a {padding-top: 26px;}
+        #barra {
+            margin: 0 auto;
+            border-radius: 80px;
+            background: #ffffff00;
+            border: 0.5px solid #3c4043;
+            color: white;
+            align-items: center;
+        }
+        #barra:hover {
+                    background:#303134; 
+                    border: 0.5px solid #303134;
+                }
+                
+        #barra-a, #barra-b{text-align: center;}
+
+        @media (min-width: 280px) and (max-width: 700px) {
+            #barra-b {width: 100%;}
+            #barra {width: 90%; max-width: 90%;}
+        }
+
+        /*INPUT E LABEL DA BARRA DE PESQUISA PRINCIPAL*/
+        #barra-form {width: 500px;}
+        #barra-form input {
+            width: 100%;
+            background: #ffffff00;
+            border: none;
+            font-size: 17px;
+            color: white;
+        }
+        #barra-form:focus, input:focus 
+        {
+            box-shadow: 0 0 0 0;
+            outline: 0;
+        }   
+        #barra-lupa {width: 20px;}
+        #barra-teclado {width: 20px;}
+        #barra-microfone {width: 25px;}
+        #barra-camera {width: 20px;}
+
+        #barra ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            padding: 5px 10px 5px 10px;       
+        }
+
+        li {padding: 5px;}
+
+        @media (min-width:280px) and (max-width: 700px) {
+            #barra-form { width: auto;}
+        }
+        
+        /*BOTOES ABAIXO DA BARRA DE PESQUISA*/
+        .pesquisaBotao {
+            background: #303134;
+            border-radius: 4px;
+            padding: 10px 16px 10px 16px;
+            margin: 29px 4px 29px 4px;
+            border: 1px solid #303134;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .pesquisaBotao:hover {border: 0.5px solid #4d4e51;}
+
+
+        /*FOOTER*/
+        footer {
+            position: fixed;
+            bottom: 0;
+            color: #999da2;
+            width: 100%;
+            background: #171819;
+        }
+
+        footer p {
+            padding: 15px 30px;
+            border-bottom: 1px solid #3c4043;
+            font-size: 15px;
+            font-family: arial,sans-serif;
+        }
+
+        footer li {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            padding: 15px;
+        }
+
+        footer li:hover {
+            text-decoration: underline;
+        }
+        #footer-principal{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;  
+            padding: 0 20px;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            #footer-principal {justify-content: space-evenly;}
+        }
+        #footer1{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding-top: 0;
+        }
+        #footer2{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            padding-top: 0;
+        }
+
+        /*FONTES*/
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Gmail</a></li>
+                <li><a href="#">Imagens</a></li>
+                <li id="reset"><div id="app"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/17/17334.png?w=826&t=st=1683726642~exp=1683727242~hmac=aa286e5a80c38f8cea100c3972612048d5f6dacc070ef0bf83f98b18666b03fe"></a></div></li>
+                <li id="reset"><a href="#"><div id="perfil"></div></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--IMAGEM GOOGLE-->
+    <div><img id="google" src="https://www.google.com.br/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png" alt=""></div>
+
+    <!--ABA DE PESQUISA E BOTÕES DE PESQUISAR E ESTOU COM SORTE-->
+    <div id="barra-a">
+        <section id="barra-b">
+            <div id="barra">
+                <ul>
+                    <li><img src="https://icones.pro/wp-content/uploads/2021/06/icone-loupe-gris.png" id="barra-lupa"></li>
+                    <li>
+                        <form action="https://www.google.com.br/search" id="barra-form" >
+                            <label for="q"></label>
+                            <input type="text" id="q" name="q"> 
+                        </form>
+                    </li>
+                    <li><a href="#"><img src="https://cdn.icon-icons.com/icons2/906/PNG/512/keyboard_icon-icons.com_70090.png" id="barra-teclado"></a></li>
+                    <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3128/3128290.png" id="barra-microfone"></a></li>
+                    <li><a href="#"><img src="https://static.wikia.nocookie.net/logopedia/images/2/2b/Google_Lens_2021.svg/revision/latest/scale-to-width-down/250?cb=20221018010850" id="barra-camera"></a></li>
+                </ul>
+            </div>
+            
+            <!--BOTÕES: PESQUISA E ESTOU COM SORTE-->
+            <input type="submit" class="pesquisaBotao" value="Pesquisa Google">
+            <input type="submit" class="pesquisaBotao" value="Estou com sorte">
+            
+        </section>
+    </div><br><br><br>
+    
+    <footer>
+        <p>Brasil</p>
+        <div id="footer-principal">
+            <ul id="footer1">
+                <li>Sobre</li>
+                <li>Publicidade</li>
+                <li>Negócios</li>
+                <li>Como funciona a Pesquisa</li>
+            </ul>
+            <ul id="footer2">
+                <li>Privacidade</li>
+                <li>Termos</li>
+                <li>Configurações</li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
